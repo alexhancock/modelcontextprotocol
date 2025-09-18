@@ -20,7 +20,6 @@ This directory contains Rust implementations of the MCP compliance test binaries
 
 ### Dependencies
 
-- `rmcp` (v0.4.0+): Core MCP SDK
 - `tokio`: Async runtime
 - `serde`: JSON serialization
 - `clap`: CLI argument parsing
@@ -28,31 +27,52 @@ This directory contains Rust implementations of the MCP compliance test binaries
 - `tracing`: Logging
 - `uuid`: Session ID generation
 
+Note: This implementation uses a custom JSON-RPC implementation rather than the official `rmcp` SDK to ensure compatibility and control over the MCP protocol implementation.
+
 ## Implementation Patterns
 
 ### Server Implementation
 
-```rust
-use rmcp::server::{Server, ServerHandler, RequestContext};
-use rmcp::macros::{tool_router, tool};
+The server implementation uses a custom JSON-RPC handler:
 
-#[tool_router]
-impl CalcServer {
-    #[tool("add")]
-    async fn add(&self, ctx: RequestContext, a: f64, b: f64) -> Result<f64, String> {
-        Ok(a + b)
+```rust
+async fn handle_request(server_name: &str, request: &JsonRpcRequest, state: &ServerState) -> anyhow::Result<Value> {
+    match request.method.as_str() {
+        "initialize" => {
+            Ok(json!({
+                "protocolVersion": "2025-06-18",
+                "capabilities": {
+                    "tools": {"listChanged": true},
+                    "resources": {"subscribe": true, "listChanged": true},
+                    "prompts": {"listChanged": true}
+                }
+            }))
+        }
+        "tools/call" => {
+            // Handle tool calls based on server type and tool name
+        }
+        // ... other methods
     }
 }
 ```
 
 ### Client Implementation
 
-```rust
-use rmcp::client::Client;
-use rmcp::transport::stdio::StdioTransport;
+The client spawns a server process and communicates via stdio:
 
-let transport = StdioTransport::spawn_command(&server_cmd).await?;
-let client = Client::new(transport).await?;
+```rust
+let mut child = ProcessCommand::new(&server_args[0])
+    .args(&server_args[1..])
+    .stdin(Stdio::piped())
+    .stdout(Stdio::piped())
+    .spawn()?;
+
+// Send JSON-RPC requests and read responses
+let init_request = JsonRpcRequest {
+    jsonrpc: "2.0".to_string(),
+    method: "initialize".to_string(),
+    // ...
+};
 ```
 
 ## Server Definitions
