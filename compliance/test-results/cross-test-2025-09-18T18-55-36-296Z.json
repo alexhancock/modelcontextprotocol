@@ -1,0 +1,911 @@
+{
+  "timestamp": "2025-09-18T18-55-36-296Z",
+  "config": {
+    "sdks": [
+      "rust",
+      "rust"
+    ],
+    "scenariosPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/scenarios/data.json",
+    "goldensPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/scenarios/goldens",
+    "resultsPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/test-results",
+    "timeout": 10000
+  },
+  "summary": {
+    "total": 92,
+    "passed": 28,
+    "failed": 64,
+    "passRate": "30.4%",
+    "bySDK": {
+      "rust->rust": {
+        "passed": 28,
+        "failed": 64
+      }
+    }
+  },
+  "results": [
+    {
+      "scenarioId": 1,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 2,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:44:34.934582Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 2: client1 connects to CalcServer and calls ambiguous_add(a=10), receives elicitation for b, responds with 20, gets result of 30\n\u001b[2m2025-09-18T18:44:34.940009Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:44:34.940047Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Ambiguous add response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"content\": [\n      {\n        \"text\": \"This tool requires elicitation for parameter 'b' which is not yet implemented\",\n        \"type\": \"text\"\n      }\n    ],\n    \"isError\": true\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 3,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:44:45.139117Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 3: client1 & client2 connect to CalcServer; client1 calls set_trig_allowed(allowed=true) tool. client1 gets list of tools that includes cos & sin, and client2 gets list of tools that doesn't\n\u001b[2m2025-09-18T18:44:45.145860Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:44:45.145885Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 3 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 4,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 5,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:44:55.649281Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 5: client1 connects to CalcServer, calls prompts/get for example-maths prompt, receives prompt template with mathematical problem-solving instructions\n\u001b[2m2025-09-18T18:44:55.659972Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:44:55.660076Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Prompt response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"description\": \"A prompt template that helps with mathematical problem solving\",\n    \"messages\": [\n      {\n        \"content\": {\n          \"text\": \"Help me solve mathematical problems step by step.\",\n          \"type\": \"text\"\n        },\n        \"role\": \"user\"\n      }\n    ]\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 6,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 7,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:06.166416Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 7: client1 connects to CalcServer, subscribes to resource://special-number, client2 connects and calls write_special_number(value=50), client1 receives resource update notification\n\u001b[2m2025-09-18T18:45:06.174598Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:06.174635Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 7 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 8,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:16.363705Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 8: client1 connects to FileServer, calls resources/list with pagination (limit=2), receives first page with next_cursor, calls again with cursor to get remaining resources\n\u001b[2m2025-09-18T18:45:16.368111Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:16.368123Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 8 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 9,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:26.576474Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 9: client1 connects to FileServer, reads file:///readme.txt resource directly, then calls write_file(path=/readme.txt) to update it, reads again to verify change\n\u001b[2m2025-09-18T18:45:26.587517Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:26.587544Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 9 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 10,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:36.783888Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 10: client1 connects to FileServer, subscribes to file:///watched.txt, then calls write_file to modify it, receives resource update notification\n\u001b[2m2025-09-18T18:45:36.791245Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:36.791272Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 10 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 11,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:46.992338Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 11: client1 connects to ErrorServer, calls always_error tool, receives proper error response with error code and message\n\u001b[2m2025-09-18T18:45:47.002852Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:47.002887Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 11 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 12,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:45:57.200427Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 12: client1 connects to ErrorServer, calls timeout tool with progress tracking, cancels after 1 second, receives cancelled acknowledgment\n\u001b[2m2025-09-18T18:45:57.212330Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:45:57.212373Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 12 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 13,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 15,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 16,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:08.001469Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 16: client1 connects to FileServer, server sends roots/list-changed notification, client calls roots/list and receives updated file system roots\n\u001b[2m2025-09-18T18:46:08.013913Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:08.013937Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 16 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 17,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:18.216498Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 17: client1 connects to CalcServer, sets logging level to debug, performs add(5,10) and tools/list operations, retrieves logs showing operation history\n\u001b[2m2025-09-18T18:46:18.226801Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:18.226849Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 17 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 18,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:28.410750Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 18: client1 connects to FileServer, lists prompts with pagination, gets prompt by name, then lists prompt templates and calls one with parameters\n\u001b[2m2025-09-18T18:46:28.419192Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:28.419217Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 18 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 20,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:38.617783Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 20: client1 connects to FileServer, provides text completion context, server offers completion suggestions based on file content\n\u001b[2m2025-09-18T18:46:38.627618Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:38.627644Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 20 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 21,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 22,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:49.126236Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 22: client1 connects to CalcServer, calls tools/list with changed notification support, server notifies when tools change after set_trig_allowed\n\u001b[2m2025-09-18T18:46:49.134799Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:49.134823Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 22 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 23,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:46:59.334008Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 23: Three clients connect to CalcServer via different transports (stdio, SSE, streamable-http), all perform same operations and get consistent results\n\u001b[2m2025-09-18T18:46:59.339644Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:46:59.339659Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 23 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 24,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:47:09.539586Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 24: client1 connects to CalcServer, calls ambiguous_add, receives elicitation request but declines to provide input, receives appropriate error\n\u001b[2m2025-09-18T18:47:09.548199Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:47:09.548236Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 24 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 25,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 1,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 2,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:47:20.357519Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 2: client1 connects to CalcServer and calls ambiguous_add(a=10), receives elicitation for b, responds with 20, gets result of 30\n\u001b[2m2025-09-18T18:47:20.364489Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:47:20.364538Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Ambiguous add response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"content\": [\n      {\n        \"text\": \"This tool requires elicitation for parameter 'b' which is not yet implemented\",\n        \"type\": \"text\"\n      }\n    ],\n    \"isError\": true\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 3,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:47:30.573438Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 3: client1 & client2 connect to CalcServer; client1 calls set_trig_allowed(allowed=true) tool. client1 gets list of tools that includes cos & sin, and client2 gets list of tools that doesn't\n\u001b[2m2025-09-18T18:47:30.586032Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:47:30.586056Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 3 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 4,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 5,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:47:41.080591Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 5: client1 connects to CalcServer, calls prompts/get for example-maths prompt, receives prompt template with mathematical problem-solving instructions\n\u001b[2m2025-09-18T18:47:41.088761Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:47:41.088854Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Prompt response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"description\": \"A prompt template that helps with mathematical problem solving\",\n    \"messages\": [\n      {\n        \"content\": {\n          \"text\": \"Help me solve mathematical problems step by step.\",\n          \"type\": \"text\"\n        },\n        \"role\": \"user\"\n      }\n    ]\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 6,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 7,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:47:51.584508Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 7: client1 connects to CalcServer, subscribes to resource://special-number, client2 connects and calls write_special_number(value=50), client1 receives resource update notification\n\u001b[2m2025-09-18T18:47:51.589237Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:47:51.589247Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 7 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 8,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:01.800302Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 8: client1 connects to FileServer, calls resources/list with pagination (limit=2), receives first page with next_cursor, calls again with cursor to get remaining resources\n\u001b[2m2025-09-18T18:48:01.810668Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:01.810692Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 8 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 9,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:11.999620Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 9: client1 connects to FileServer, reads file:///readme.txt resource directly, then calls write_file(path=/readme.txt) to update it, reads again to verify change\n\u001b[2m2025-09-18T18:48:12.014763Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:12.014837Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 9 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 10,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:22.204432Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 10: client1 connects to FileServer, subscribes to file:///watched.txt, then calls write_file to modify it, receives resource update notification\n\u001b[2m2025-09-18T18:48:22.209873Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:22.209892Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 10 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 11,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:32.406980Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 11: client1 connects to ErrorServer, calls always_error tool, receives proper error response with error code and message\n\u001b[2m2025-09-18T18:48:32.415180Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:32.415209Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 11 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 12,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:42.608939Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 12: client1 connects to ErrorServer, calls timeout tool with progress tracking, cancels after 1 second, receives cancelled acknowledgment\n\u001b[2m2025-09-18T18:48:42.616958Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:42.616979Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 12 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 13,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 15,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 16,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:48:53.426307Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 16: client1 connects to FileServer, server sends roots/list-changed notification, client calls roots/list and receives updated file system roots\n\u001b[2m2025-09-18T18:48:53.434606Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:48:53.434637Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 16 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 17,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:03.630906Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 17: client1 connects to CalcServer, sets logging level to debug, performs add(5,10) and tools/list operations, retrieves logs showing operation history\n\u001b[2m2025-09-18T18:49:03.638874Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:03.638898Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 17 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 18,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:13.833667Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 18: client1 connects to FileServer, lists prompts with pagination, gets prompt by name, then lists prompt templates and calls one with parameters\n\u001b[2m2025-09-18T18:49:13.840434Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:13.840451Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 18 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 20,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:24.047299Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 20: client1 connects to FileServer, provides text completion context, server offers completion suggestions based on file content\n\u001b[2m2025-09-18T18:49:24.060892Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:24.060941Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 20 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 21,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 22,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:34.560981Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 22: client1 connects to CalcServer, calls tools/list with changed notification support, server notifies when tools change after set_trig_allowed\n\u001b[2m2025-09-18T18:49:34.571840Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:34.571895Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 22 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 23,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:44.761442Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 23: Three clients connect to CalcServer via different transports (stdio, SSE, streamable-http), all perform same operations and get consistent results\n\u001b[2m2025-09-18T18:49:44.770083Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:44.770121Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 23 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 24,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:49:54.967082Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 24: client1 connects to CalcServer, calls ambiguous_add, receives elicitation request but declines to provide input, receives appropriate error\n\u001b[2m2025-09-18T18:49:54.976458Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:49:54.976497Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 24 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 25,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 1,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 2,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:05.787309Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 2: client1 connects to CalcServer and calls ambiguous_add(a=10), receives elicitation for b, responds with 20, gets result of 30\n\u001b[2m2025-09-18T18:50:05.802078Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:05.802240Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Ambiguous add response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"content\": [\n      {\n        \"text\": \"This tool requires elicitation for parameter 'b' which is not yet implemented\",\n        \"type\": \"text\"\n      }\n    ],\n    \"isError\": true\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 3,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:15.986820Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 3: client1 & client2 connect to CalcServer; client1 calls set_trig_allowed(allowed=true) tool. client1 gets list of tools that includes cos & sin, and client2 gets list of tools that doesn't\n\u001b[2m2025-09-18T18:50:15.994264Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:15.994296Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 3 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 4,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 5,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:26.494575Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 5: client1 connects to CalcServer, calls prompts/get for example-maths prompt, receives prompt template with mathematical problem-solving instructions\n\u001b[2m2025-09-18T18:50:26.500856Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:26.500910Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Prompt response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"description\": \"A prompt template that helps with mathematical problem solving\",\n    \"messages\": [\n      {\n        \"content\": {\n          \"text\": \"Help me solve mathematical problems step by step.\",\n          \"type\": \"text\"\n        },\n        \"role\": \"user\"\n      }\n    ]\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 6,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 7,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:37.004280Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 7: client1 connects to CalcServer, subscribes to resource://special-number, client2 connects and calls write_special_number(value=50), client1 receives resource update notification\n\u001b[2m2025-09-18T18:50:37.011109Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:37.011129Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 7 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 8,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:47.214305Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 8: client1 connects to FileServer, calls resources/list with pagination (limit=2), receives first page with next_cursor, calls again with cursor to get remaining resources\n\u001b[2m2025-09-18T18:50:47.222553Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:47.222588Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 8 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 9,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:50:57.412596Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 9: client1 connects to FileServer, reads file:///readme.txt resource directly, then calls write_file(path=/readme.txt) to update it, reads again to verify change\n\u001b[2m2025-09-18T18:50:57.419480Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:50:57.419518Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 9 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 10,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:07.623834Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 10: client1 connects to FileServer, subscribes to file:///watched.txt, then calls write_file to modify it, receives resource update notification\n\u001b[2m2025-09-18T18:51:07.633275Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:07.633322Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 10 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 11,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:17.824474Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 11: client1 connects to ErrorServer, calls always_error tool, receives proper error response with error code and message\n\u001b[2m2025-09-18T18:51:17.831653Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:17.831678Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 11 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 12,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:28.029400Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 12: client1 connects to ErrorServer, calls timeout tool with progress tracking, cancels after 1 second, receives cancelled acknowledgment\n\u001b[2m2025-09-18T18:51:28.035002Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:28.035023Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 12 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 13,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 15,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 16,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:38.844960Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 16: client1 connects to FileServer, server sends roots/list-changed notification, client calls roots/list and receives updated file system roots\n\u001b[2m2025-09-18T18:51:38.853452Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:38.853490Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 16 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 17,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:49.052876Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 17: client1 connects to CalcServer, sets logging level to debug, performs add(5,10) and tools/list operations, retrieves logs showing operation history\n\u001b[2m2025-09-18T18:51:49.066266Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:49.066333Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 17 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 18,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:51:59.252522Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 18: client1 connects to FileServer, lists prompts with pagination, gets prompt by name, then lists prompt templates and calls one with parameters\n\u001b[2m2025-09-18T18:51:59.262399Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:51:59.262437Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 18 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 20,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:52:09.462181Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 20: client1 connects to FileServer, provides text completion context, server offers completion suggestions based on file content\n\u001b[2m2025-09-18T18:52:09.475887Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:52:09.475951Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 20 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 21,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 22,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:52:19.978581Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 22: client1 connects to CalcServer, calls tools/list with changed notification support, server notifies when tools change after set_trig_allowed\n\u001b[2m2025-09-18T18:52:19.990947Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:52:19.990971Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 22 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 23,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:52:30.178387Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 23: Three clients connect to CalcServer via different transports (stdio, SSE, streamable-http), all perform same operations and get consistent results\n\u001b[2m2025-09-18T18:52:30.191727Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:52:30.191803Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 23 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 24,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:52:40.390647Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 24: client1 connects to CalcServer, calls ambiguous_add, receives elicitation request but declines to provide input, receives appropriate error\n\u001b[2m2025-09-18T18:52:40.404188Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:52:40.404250Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 24 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 25,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 1,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 2,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:52:51.194006Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 2: client1 connects to CalcServer and calls ambiguous_add(a=10), receives elicitation for b, responds with 20, gets result of 30\n\u001b[2m2025-09-18T18:52:51.200279Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:52:51.200328Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Ambiguous add response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"content\": [\n      {\n        \"text\": \"This tool requires elicitation for parameter 'b' which is not yet implemented\",\n        \"type\": \"text\"\n      }\n    ],\n    \"isError\": true\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 3,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:01.397958Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 3: client1 & client2 connect to CalcServer; client1 calls set_trig_allowed(allowed=true) tool. client1 gets list of tools that includes cos & sin, and client2 gets list of tools that doesn't\n\u001b[2m2025-09-18T18:53:01.403567Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:01.403586Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 3 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 4,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 5,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:11.909766Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 5: client1 connects to CalcServer, calls prompts/get for example-maths prompt, receives prompt template with mathematical problem-solving instructions\n\u001b[2m2025-09-18T18:53:11.916478Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:11.916535Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Prompt response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"result\": {\n    \"description\": \"A prompt template that helps with mathematical problem solving\",\n    \"messages\": [\n      {\n        \"content\": {\n          \"text\": \"Help me solve mathematical problems step by step.\",\n          \"type\": \"text\"\n        },\n        \"role\": \"user\"\n      }\n    ]\n  }\n}\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 6,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 7,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:22.419467Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 7: client1 connects to CalcServer, subscribes to resource://special-number, client2 connects and calls write_special_number(value=50), client1 receives resource update notification\n\u001b[2m2025-09-18T18:53:22.426758Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:22.426778Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 7 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 8,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:32.618024Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 8: client1 connects to FileServer, calls resources/list with pagination (limit=2), receives first page with next_cursor, calls again with cursor to get remaining resources\n\u001b[2m2025-09-18T18:53:32.623121Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:32.623140Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 8 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 9,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:42.832174Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 9: client1 connects to FileServer, reads file:///readme.txt resource directly, then calls write_file(path=/readme.txt) to update it, reads again to verify change\n\u001b[2m2025-09-18T18:53:42.843350Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:42.843401Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 9 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 10,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:53:53.034720Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 10: client1 connects to FileServer, subscribes to file:///watched.txt, then calls write_file to modify it, receives resource update notification\n\u001b[2m2025-09-18T18:53:53.044440Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:53:53.044479Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 10 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 11,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:03.245838Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 11: client1 connects to ErrorServer, calls always_error tool, receives proper error response with error code and message\n\u001b[2m2025-09-18T18:54:03.260003Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:03.260046Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 11 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 12,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:13.450207Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 12: client1 connects to ErrorServer, calls timeout tool with progress tracking, cancels after 1 second, receives cancelled acknowledgment\n\u001b[2m2025-09-18T18:54:13.458635Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"ErrorServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:13.458674Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 12 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 13,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 15,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 16,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:24.260297Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 16: client1 connects to FileServer, server sends roots/list-changed notification, client calls roots/list and receives updated file system roots\n\u001b[2m2025-09-18T18:54:24.269117Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:24.269156Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 16 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 17,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:34.457380Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 17: client1 connects to CalcServer, sets logging level to debug, performs add(5,10) and tools/list operations, retrieves logs showing operation history\n\u001b[2m2025-09-18T18:54:34.462154Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:34.462167Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 17 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 18,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:44.672085Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 18: client1 connects to FileServer, lists prompts with pagination, gets prompt by name, then lists prompt templates and calls one with parameters\n\u001b[2m2025-09-18T18:54:44.680210Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:44.680231Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 18 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 20,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:54:54.875660Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 20: client1 connects to FileServer, provides text completion context, server offers completion suggestions based on file content\n\u001b[2m2025-09-18T18:54:54.886489Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"FileServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:54:54.886541Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 20 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 21,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    },
+    {
+      "scenarioId": 22,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:55:05.388938Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 22: client1 connects to CalcServer, calls tools/list with changed notification support, server notifies when tools change after set_trig_allowed\n\u001b[2m2025-09-18T18:55:05.397853Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:55:05.397908Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 22 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 23,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:55:15.594078Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 23: Three clients connect to CalcServer via different transports (stdio, SSE, streamable-http), all perform same operations and get consistent results\n\u001b[2m2025-09-18T18:55:15.610942Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:55:15.610978Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 23 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 24,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client timeout - scenario not completed. Stdout: \u001b[2m2025-09-18T18:55:25.799304Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Executing scenario 24: client1 connects to CalcServer, calls ambiguous_add, receives elicitation request but declines to provide input, receives appropriate error\n\u001b[2m2025-09-18T18:55:25.806642Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Initialize response: {\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"result\": {\n    \"capabilities\": {\n      \"prompts\": {\n        \"listChanged\": true\n      },\n      \"resources\": {\n        \"listChanged\": true,\n        \"subscribe\": true\n      },\n      \"tools\": {\n        \"listChanged\": true\n      }\n    },\n    \"protocolVersion\": \"2025-06-18\",\n    \"serverInfo\": {\n      \"name\": \"CalcServer\",\n      \"version\": \"1.0.0\"\n    }\n  }\n}\n\u001b[2m2025-09-18T18:55:25.806664Z\u001b[0m \u001b[32m INFO\u001b[0m \u001b[2mtest_client\u001b[0m\u001b[2m:\u001b[0m Scenario 24 not fully implemented yet, but connection successful\n. Stderr: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 25,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": true,
+      "capturedLog": [],
+      "comparisonResult": {
+        "match": true
+      }
+    }
+  ]
+}

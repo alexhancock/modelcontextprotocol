@@ -1,0 +1,233 @@
+{
+  "timestamp": "2025-09-18T17-06-10-408Z",
+  "config": {
+    "sdks": [
+      "rust"
+    ],
+    "scenariosPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/scenarios/data.json",
+    "goldensPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/scenarios/goldens",
+    "resultsPath": "/Users/alexhancock/Development/modelcontextprotocol/compliance/test-results",
+    "timeout": 30000
+  },
+  "summary": {
+    "total": 23,
+    "passed": 0,
+    "failed": 23,
+    "passRate": "0.0%",
+    "bySDK": {
+      "rust->rust": {
+        "passed": 0,
+        "failed": 23
+      }
+    }
+  },
+  "results": [
+    {
+      "scenarioId": 1,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 2,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 3,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 4,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 5,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 6,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 7,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 8,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 9,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 10,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 11,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 12,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 13,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 15,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 16,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 17,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 18,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 20,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 21,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 22,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 23,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 24,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    },
+    {
+      "scenarioId": 25,
+      "clientSDK": "rust",
+      "serverSDK": "rust",
+      "transport": "stdio",
+      "success": false,
+      "error": "Client exited with code 2. Stderr: error: unexpected argument '--server-name' found\n\n  tip: to pass '--server-name' as a value, use '-- --server-name'\n\nUsage: test-client --scenario-id <ID> --id <CLIENT_ID> stdio <command>...\n\nFor more information, try '--help'.\n. Stdout: ",
+      "capturedLog": []
+    }
+  ]
+}
